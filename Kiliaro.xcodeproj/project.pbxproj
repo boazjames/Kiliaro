@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		057357EC28EC16BB00886688 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357EB28EC16BB00886688 /* DateExt.swift */; };
 		527E218F28EAB8B900D3FE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E218E28EAB8B900D3FE79 /* AppDelegate.swift */; };
 		527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E219028EAB8B900D3FE79 /* SceneDelegate.swift */; };
 		527E219328EAB8B900D3FE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E219228EAB8B900D3FE79 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		057357EB28EC16BB00886688 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		527E218B28EAB8B900D3FE79 /* Kiliaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiliaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527E218E28EAB8B900D3FE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527E219028EAB8B900D3FE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		057357EA28EC16AA00886688 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				057357EB28EC16BB00886688 /* DateExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		527E218228EAB8B900D3FE79 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +260,7 @@
 		527E21DB28EB38A200D3FE79 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				057357EA28EC16AA00886688 /* Extensions */,
 				527E21DC28EB38B900D3FE79 /* Localizable.swift */,
 				527E21E028EB4D0C00D3FE79 /* Utils.swift */,
 			);
@@ -397,6 +408,7 @@
 				527E21CE28EAE02200D3FE79 /* UIImageViewExt.swift in Sources */,
 				527E21CC28EADEF100D3FE79 /* UIColorExt.swift in Sources */,
 				527E21D328EAE3FB00D3FE79 /* MainNavigationVC.swift in Sources */,
+				057357EC28EC16BB00886688 /* DateExt.swift in Sources */,
 				527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */,
 				527E21DD28EB38B900D3FE79 /* Localizable.swift in Sources */,
 				527E21C428EADD3000D3FE79 /* PhotoVC.swift in Sources */,

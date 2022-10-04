@@ -20,18 +20,21 @@ class PhotoDetailsVC: BaseVC {
         }
         view.image = UIImage(named: "photo")
         view.clipsToBounds = true
-        view.backgroundColor = .darkBackgroundColor
+        view.backgroundColor = .whiteColor
         view.tag = 1
+        view.isUserInteractionEnabled = true
         
         return view
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "photos".localized
-        
+                
         imgView.loadImage(imgUrl: "https://imgdc1.kiliaro.com/shared/djlCbGusTJamg_ca4axEVw/imageresize/i/60cc705d0025904750ee22d300020eb4/0.jpg")
+        
+        let date = Date.parseServerDate(dateString: "2021-06-18T10:07:25Z")
+        
+        setCustomTitle(title: date?.dateFormat() ?? "", subtitle: date?.timeFormat() ?? "", isLightContent: false)
         
     }
     
@@ -39,6 +42,8 @@ class PhotoDetailsVC: BaseVC {
         super.viewWillAppear(animated)
         self.showNavBar()
         self.changeNavBarAppearance(isLightContent: false, isTranslucent: true)
+        
+        hidesBottomBarWhenPushed = true
         
         updateStatusBarStyle()
         
@@ -63,16 +68,31 @@ class PhotoDetailsVC: BaseVC {
     }
     
     override func setupViews() {
-        let safeAreaLayoutGuide = view.safeAreaLayoutGuide
-        self.view.backgroundColor = .darkBackgroundColor
+        self.view.backgroundColor = .whiteColor
         self.view.addSubview(imgView)
         
         NSLayoutConstraint.activate([
-            imgView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            imgView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            imgView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            imgView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor)
+            imgView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            imgView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            imgView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            imgView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
         
+    }
+    
+    override func setupGestures() {
+        imgView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleNavBarVisibility)))
+    }
+    
+    @objc private func toggleNavBarVisibility() {
+        if prefersStatusBarHidden {
+            showNavBar()
+            showStatusBar()
+            imgView.backgroundColor = .whiteColor
+        } else {
+            hideNavBar()
+            hideStatusBar()
+            imgView.backgroundColor = .darkBackgroundColor
+        }
     }
 }
