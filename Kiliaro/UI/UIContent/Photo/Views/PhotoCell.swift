@@ -53,7 +53,7 @@ class PhotoCell: UICollectionViewCell {
         imgView.pinToView(parentView: self.contentView)
     }
     
-    func setupData(_ item: String) {
-        imgView.loadImage(imgUrl: item)
+    func setupData(_ item: PhotoMedia) {
+        imgView.loadImage(imgUrl: item.thumbnailURL ?? "", width: 300, height: 300)
     }
 }

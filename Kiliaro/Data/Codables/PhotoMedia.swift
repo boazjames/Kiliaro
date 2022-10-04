@@ -14,7 +14,7 @@ struct PhotoMedia: Codable {
     let mediaType: String?
     let filename: String?
     let size: Int?
-    let createdAt: Date?
+    let createdAt: String?
     let takenAt, guessedTakenAt: String?
     let md5Sum: String?
     let contentType: String?
@@ -38,3 +38,5 @@ struct PhotoMedia: Codable {
         case resx, resy
     }
 }
+
+typealias PhotoMediaResponse = [PhotoMedia]

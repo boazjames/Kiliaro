@@ -11,7 +11,7 @@ func getDataFromUrl(url: URL, completion: @escaping (Data?, URLResponse?, Error?
     let config = URLSessionConfiguration.default
     config.timeoutIntervalForRequest = 60
     config.requestCachePolicy = .returnCacheDataElseLoad
-    let urlSession = URLSession(configuration: .default)
+    let urlSession = URLSession(configuration: config)
     urlSession.dataTask(with: url) { data, response, error in
         completion(data, response, error)
     }.resume()

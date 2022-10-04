@@ -27,14 +27,12 @@ class PhotoDetailsVC: BaseVC {
         return view
     }()
     
+    var photoItem: PhotoMedia!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        imgView.loadImage(imgUrl: "https://imgdc1.kiliaro.com/shared/djlCbGusTJamg_ca4axEVw/imageresize/i/60cc705d0025904750ee22d300020eb4/0.jpg")
-        
-        let date = Date.parseServerDate(dateString: "2021-06-18T10:07:25Z")
-        
-        setCustomTitle(title: date?.dateFormat() ?? "", subtitle: date?.timeFormat() ?? "", isLightContent: false)
+        setupData()
         
     }
     
@@ -94,5 +92,13 @@ class PhotoDetailsVC: BaseVC {
             hideStatusBar()
             imgView.backgroundColor = .darkBackgroundColor
         }
+    }
+    
+    private func setupData() {
+        imgView.loadImage(imgUrl: photoItem.downloadURL ?? "")
+        
+        let date = Date.parseServerDate(dateString: photoItem.createdAt ?? "")
+        
+        setCustomTitle(title: date?.dateFormat() ?? "", subtitle: date?.timeFormat() ?? "", isLightContent: false)
     }
 }

@@ -29,6 +29,10 @@
 		527E21DD28EB38B900D3FE79 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21DC28EB38B900D3FE79 /* Localizable.swift */; };
 		527E21E128EB4D0C00D3FE79 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21E028EB4D0C00D3FE79 /* Utils.swift */; };
 		527E21E328EBE00C00D3FE79 /* PhotoDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21E228EBE00C00D3FE79 /* PhotoDetailsVC.swift */; };
+		527E21E528EC96C100D3FE79 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21E428EC96C100D3FE79 /* APIManager.swift */; };
+		527E21E828EC9FA900D3FE79 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21E728EC9FA900D3FE79 /* Constants.swift */; };
+		527E21EA28ECA07800D3FE79 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21E928ECA07800D3FE79 /* EndPoint.swift */; };
+		527E21EC28ECA20400D3FE79 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E21EB28ECA20400D3FE79 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		527E21DC28EB38B900D3FE79 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		527E21E028EB4D0C00D3FE79 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		527E21E228EBE00C00D3FE79 /* PhotoDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsVC.swift; sourceTree = "<group>"; };
+		527E21E428EC96C100D3FE79 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		527E21E728EC9FA900D3FE79 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		527E21E928ECA07800D3FE79 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		527E21EB28ECA20400D3FE79 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +219,9 @@
 		527E21C128EAC22800D3FE79 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				527E21E428EC96C100D3FE79 /* APIManager.swift */,
+				527E21E928ECA07800D3FE79 /* EndPoint.swift */,
+				527E21EB28ECA20400D3FE79 /* APIError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -282,6 +293,7 @@
 				057357EA28EC16AA00886688 /* Extensions */,
 				527E21DC28EB38B900D3FE79 /* Localizable.swift */,
 				527E21E028EB4D0C00D3FE79 /* Utils.swift */,
+				527E21E728EC9FA900D3FE79 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -418,16 +430,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527E21E528EC96C100D3FE79 /* APIManager.swift in Sources */,
+				527E21E828EC9FA900D3FE79 /* Constants.swift in Sources */,
 				527E21CA28EADE9300D3FE79 /* UIViewExt.swift in Sources */,
 				527E219328EAB8B900D3FE79 /* ViewController.swift in Sources */,
 				527E21C728EADE1000D3FE79 /* PhotoCell.swift in Sources */,
 				527E21E328EBE00C00D3FE79 /* PhotoDetailsVC.swift in Sources */,
 				527E218F28EAB8B900D3FE79 /* AppDelegate.swift in Sources */,
 				527E21D128EAE31900D3FE79 /* BaseVC.swift in Sources */,
+				527E21EC28ECA20400D3FE79 /* APIError.swift in Sources */,
 				527E21CE28EAE02200D3FE79 /* UIImageViewExt.swift in Sources */,
 				527E21CC28EADEF100D3FE79 /* UIColorExt.swift in Sources */,
 				527E21D328EAE3FB00D3FE79 /* MainNavigationVC.swift in Sources */,
 				057357EC28EC16BB00886688 /* DateExt.swift in Sources */,
+				527E21EA28ECA07800D3FE79 /* EndPoint.swift in Sources */,
 				527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */,
 				527E21DD28EB38B900D3FE79 /* Localizable.swift in Sources */,
 				527E21C428EADD3000D3FE79 /* PhotoVC.swift in Sources */,

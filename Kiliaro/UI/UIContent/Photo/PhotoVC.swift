@@ -25,11 +25,16 @@ class PhotoVC: BaseVC {
         return collectionView
     }()
     
+    private let apiManager = APIManager()
+    
+    private var photoItems = [PhotoMedia]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "photos".localized
         
+        getData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,18 +85,38 @@ class PhotoVC: BaseVC {
         
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: "cell")
     }
+    
+    private func getData() {
+        self.photoItems.removeAll()
+        self.view.showProgress()
+        apiManager.makeRequest(PhotoMediaResponse.self, endPoint: .sharedPhotos(Constant.SHARE_KEY), uploadData: nil) { result in
+            DispatchQueue.main.async {
+                self.view.hideProgress()
+                switch result {
+                case .success(let data):
+                    self.photoItems.append(contentsOf: data)
+                case .failure(let failure):
+                    debugPrint("failure", failure)
+                }
+                
+                self.collectionView.reloadData()
+            }
+            
+        }
+    }
 }
 
 // MARK: UICollectionViewDataSource
 extension PhotoVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        22
+        photoItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let item = photoItems[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PhotoCell
         cell.imgView.tag = indexPath.row + 1
-        cell.setupData("https://imgdc1.kiliaro.com/shared/djlCbGusTJamg_ca4axEVw/imageresize/i/60cc705d0025904750ee22d300020eb4/0.jpg?w=200&h=200&m=crop")
+        cell.setupData(item)
         return cell
     }
     
@@ -116,6 +141,7 @@ extension PhotoVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = PhotoDetailsVC()
+        vc.photoItem = photoItems[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
