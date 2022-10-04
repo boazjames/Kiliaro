@@ -13,14 +13,13 @@ extension Date {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
         formatter.locale = Locale(identifier: Locale.current.languageCode ?? "en")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+//        formatter.timeZone = TimeZone(secondsFromGMT: 0)
         return formatter.date(from: dateString)
     }
     
     func dateFormat() -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: Locale.current.languageCode ?? "en")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
         formatter.dateFormat = "dd MMM yyyy"
         return formatter.string(from: self)
     }
@@ -28,7 +27,6 @@ extension Date {
     func timeFormat() -> String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: Locale.current.languageCode ?? "en")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
         formatter.dateFormat = "h:mm a"
         return formatter.string(from: self)
     }
