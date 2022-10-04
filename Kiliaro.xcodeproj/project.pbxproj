@@ -195,16 +195,8 @@
 			children = (
 				527E21C828EADE8100D3FE79 /* UIExtensions */,
 				527E21C028EAC20F00D3FE79 /* UIContent */,
-				527E21BF28EAC1FB00D3FE79 /* CustomViews */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		527E21BF28EAC1FB00D3FE79 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		527E21C028EAC20F00D3FE79 /* UIContent */ = {
@@ -257,18 +249,10 @@
 		527E21CF28EAE30D00D3FE79 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				527E21D428EAE4A300D3FE79 /* Views */,
 				527E21D028EAE31900D3FE79 /* BaseVC.swift */,
 				527E21D228EAE3FB00D3FE79 /* MainNavigationVC.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		527E21D428EAE4A300D3FE79 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		527E21D728EB382B00D3FE79 /* Assets */ = {

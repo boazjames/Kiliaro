@@ -89,7 +89,7 @@ class PhotoVC: BaseVC {
     private func getData() {
         self.photoItems.removeAll()
         self.view.showProgress()
-        apiManager.makeRequest(PhotoMediaResponse.self, endPoint: .sharedPhotos(Constant.SHARE_KEY), uploadData: nil) { result in
+        apiManager.makeRequest(PhotoMediaResponse.self, endPoint: .sharedPhotos(Constant.SHARE_KEY)) { result in
             DispatchQueue.main.async {
                 self.view.hideProgress()
                 switch result {
