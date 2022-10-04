@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		057357EC28EC16BB00886688 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357EB28EC16BB00886688 /* DateExt.swift */; };
+		057357F228EC743500886688 /* PhotoMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357F128EC743500886688 /* PhotoMedia.swift */; };
 		527E218F28EAB8B900D3FE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E218E28EAB8B900D3FE79 /* AppDelegate.swift */; };
 		527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E219028EAB8B900D3FE79 /* SceneDelegate.swift */; };
 		527E219328EAB8B900D3FE79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E219228EAB8B900D3FE79 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		057357EB28EC16BB00886688 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
+		057357F128EC743500886688 /* PhotoMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMedia.swift; sourceTree = "<group>"; };
 		527E218B28EAB8B900D3FE79 /* Kiliaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiliaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527E218E28EAB8B900D3FE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527E219028EAB8B900D3FE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		057357EF28EC73B800886688 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				057357F028EC73D500886688 /* Codables */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		057357F028EC73D500886688 /* Codables */ = {
+			isa = PBXGroup;
+			children = (
+				057357F128EC743500886688 /* PhotoMedia.swift */,
+			);
+			path = Codables;
+			sourceTree = "<group>";
+		};
 		527E218228EAB8B900D3FE79 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +149,7 @@
 		527E218D28EAB8B900D3FE79 /* Kiliaro */ = {
 			isa = PBXGroup;
 			children = (
+				057357EF28EC73B800886688 /* Data */,
 				527E21DB28EB38A200D3FE79 /* Utils */,
 				527E21D728EB382B00D3FE79 /* Assets */,
 				527E21C128EAC22800D3FE79 /* Network */,
@@ -412,6 +431,7 @@
 				527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */,
 				527E21DD28EB38B900D3FE79 /* Localizable.swift in Sources */,
 				527E21C428EADD3000D3FE79 /* PhotoVC.swift in Sources */,
+				057357F228EC743500886688 /* PhotoMedia.swift in Sources */,
 				527E21E128EB4D0C00D3FE79 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
