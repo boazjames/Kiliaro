@@ -46,11 +46,14 @@ class PhotoCell: UICollectionViewCell {
         self.backgroundColor = .clear
         self.contentView.addSubview(imgView)
         
-        self.contentView.pinToView(parentView: self)
-        
         imgView.applyAspectRatio(aspectRatio: 1)
         
-        imgView.pinToView(parentView: self.contentView)
+        imgView.pinToView(parentView: self.contentView, trailing: false)
+        
+        let trailingAnchor = imgView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
+        trailingAnchor.priority = UILayoutPriority(rawValue: 999)
+        trailingAnchor.isActive = true
+        
     }
     
     func setupData(_ item: PhotoMedia) {

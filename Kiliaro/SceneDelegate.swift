@@ -25,9 +25,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         win.rootViewController = nc
         win.makeKeyAndVisible()
         window = win
-        
-        let appDel = (UIApplication.shared.delegate as! AppDelegate)
-        appDel.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
