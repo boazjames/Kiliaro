@@ -96,7 +96,13 @@ class PhotoVC: BaseVC {
                 case .success(let data):
                     self.photoItems.append(contentsOf: data)
                 case .failure(let failure):
-                    debugPrint("failure", failure)
+                    if failure.isSessionTaskError {
+                        self.showNetworkError {
+                            self.getData()
+                        }
+                    } else {
+                        self.showWarningAlert(failure.message)
+                    }
                 }
                 
                 self.collectionView.reloadData()

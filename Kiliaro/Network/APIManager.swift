@@ -41,7 +41,7 @@ class APIManager: NSObject {
                     let apiError = APIError(message: "general_api_eror_message".localized, isSessionTaskError: false, isAuthError: false)
                     completion(.failure(apiError))
                 }
-            } else if let error = error as? URLError, error.code == .notConnectedToInternet {
+            } else if let error = error as? URLError, error.code == .notConnectedToInternet || error.code == .timedOut || error.code == .dataNotAllowed {
                 debugPrint("Internet coneection issue")
                 let apiError = APIError(message: "", isSessionTaskError: true, isAuthError: false)
                 completion(.failure(apiError))

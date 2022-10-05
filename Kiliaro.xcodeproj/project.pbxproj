@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		057357EC28EC16BB00886688 /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357EB28EC16BB00886688 /* DateExt.swift */; };
 		057357F228EC743500886688 /* PhotoMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357F128EC743500886688 /* PhotoMedia.swift */; };
+		057357F428ED551E00886688 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057357F328ED551E00886688 /* UIViewControllerExt.swift */; };
 		527E218F28EAB8B900D3FE79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E218E28EAB8B900D3FE79 /* AppDelegate.swift */; };
 		527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527E219028EAB8B900D3FE79 /* SceneDelegate.swift */; };
 		527E219828EAB8BB00D3FE79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527E219728EAB8BB00D3FE79 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		057357EB28EC16BB00886688 /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		057357F128EC743500886688 /* PhotoMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoMedia.swift; sourceTree = "<group>"; };
+		057357F328ED551E00886688 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		527E218B28EAB8B900D3FE79 /* Kiliaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kiliaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		527E218E28EAB8B900D3FE79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		527E219028EAB8B900D3FE79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				527E21C928EADE9300D3FE79 /* UIViewExt.swift */,
 				527E21CB28EADEF100D3FE79 /* UIColorExt.swift */,
 				527E21CD28EAE02200D3FE79 /* UIImageViewExt.swift */,
+				057357F328ED551E00886688 /* UIViewControllerExt.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				057357EC28EC16BB00886688 /* DateExt.swift in Sources */,
 				527E21EA28ECA07800D3FE79 /* EndPoint.swift in Sources */,
 				527E219128EAB8B900D3FE79 /* SceneDelegate.swift in Sources */,
+				057357F428ED551E00886688 /* UIViewControllerExt.swift in Sources */,
 				527E21DD28EB38B900D3FE79 /* Localizable.swift in Sources */,
 				527E21C428EADD3000D3FE79 /* PhotoVC.swift in Sources */,
 				057357F228EC743500886688 /* PhotoMedia.swift in Sources */,

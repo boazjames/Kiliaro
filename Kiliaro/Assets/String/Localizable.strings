@@ -10,3 +10,7 @@
 "oops" = "Oops!!!";
 "net_eror_message" = "Please check your internet connection.";
 "general_api_eror_message" = "Something went wrong. Please try again later.";
+"ok" = "OK";
+"retry" = "Retry";
+"cancel" = "Cancel";
+"connectivity_issue" = "Connectivity issue";
